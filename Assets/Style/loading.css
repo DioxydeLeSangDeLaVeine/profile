@@ -1,0 +1,81 @@
+.loading {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background-color: #18191C;
+    box-sizing: border-box;
+}
+
+.loading_cube {
+    height: 15px;
+    width: 15px;
+    margin: auto;
+    position: absolute;
+    background-color: #5865F2;
+}
+
+.alt_1 {
+    animation: infinite 2s alt_1;
+}
+
+@keyframes alt_1 {
+    0% {
+        transform: scale(0.75) rotate(-90deg);
+        left: calc(50% + 20px);
+        top: calc(50% - 20px);
+    }
+    25% {
+        transform: scale(1);
+        left: calc(50% + 20px);
+        top: calc(50% + 20px);
+    }
+    50% {
+        transform: scale(0.75) rotate(-90deg);
+        left: calc(50% - 20px);
+        top: calc(50% + 20px);
+    }
+    75% {
+        transform: scale(1);
+        left: calc(50% - 20px);
+        top: calc(50% - 20px);
+    }
+    100% {
+        transform: scale(0.75) rotate(-90deg);
+        left: calc(50% + 20px);
+        top: calc(50% - 20px);
+    }
+}
+
+.alt_2 {
+    animation: infinite 2s alt_2;
+}
+
+@keyframes alt_2 {
+    0% {
+        transform: scale(0.75) rotate(-90deg);
+        left: calc(50% - 20px);
+        top: calc(50% + 20px);
+    }
+    25% {
+        transform: scale(1);
+        left: calc(50% - 20px);
+        top: calc(50% - 20px);
+    }
+    50% {
+        transform: scale(0.75) rotate(-90deg);
+        left: calc(50% + 20px);
+        top: calc(50% - 20px);
+    }
+    75% {
+        transform: scale(1);
+        left: calc(50% + 20px);
+        top: calc(50% + 20px);
+    }
+    100% {
+        transform: scale(0.75) rotate(-90deg);
+        left: calc(50% - 20px);
+        top: calc(50% + 20px);
+    }
+}

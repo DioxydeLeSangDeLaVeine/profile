@@ -1,0 +1,201 @@
+body {
+    background: linear-gradient(to bottom right,#f356bf,#1f91dd);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    color: #fff;
+    font-family: Whitney, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+@media screen and (min-width: 600px) and (min-height: 800px) {
+    .portofolio {
+        border-radius: 10px !important;
+        width: 450px !important;
+        height: 600px !important;
+        margin: auto !important;
+    }
+}
+
+.img {
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.separator {
+    width: 100%;
+    height: 1px;
+    margin: 5px 0px;
+    background-color: #2F3136;
+    border-radius: 1px;
+}
+
+.super {
+    min-height: 7.5px;
+}
+
+.portofolio {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    background-color: #18191C;
+    overflow: hidden;
+    position: relative;
+}
+
+.banner {
+    min-height: 150px;
+    height: 150px;
+    background-image: url('../Images/Banner.png');
+    background-position: 50% 50%;
+}
+
+.menu {
+    width: 100%;
+    height: calc(100% - 150px);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    padding-bottom: 5px;
+}
+
+.path {
+    position: relative;
+    display: flex;
+    min-height: calc(70px + -15px);
+    height: calc(70px + -15px);
+}
+
+.avatar {
+    background-image: url('../Images/Avatar.png');
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+    outline: solid 7.5px #18191C;
+    position: absolute;
+    top: calc(-37.5px + -15px);
+    left: calc(37.5px + -15px);
+}
+
+.badges {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    margin-left: calc(37.5px + -15px + 100px + 37.5px - 15px);
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(20px,20px));
+    justify-content: right;
+}
+
+.badge {
+    height: 20px;
+    width: 20px;
+    display: flex;
+    user-select: none;
+    cursor: pointer;
+    transition-duration: 0.25s
+}
+
+.badge img {
+    margin: auto;
+    height: 100%;
+    width: 100%;
+}
+
+.username {
+    padding: 5px 0px;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.submenu {
+    height: 100%;
+    width: 100%;
+    overflow-y: auto;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    padding: 5px;
+}
+
+.submenu::-webkit-scrollbar {
+    width: 5px;
+}
+
+.submenu::-webkit-scrollbar-track {
+    width: 5px;
+    margin: 15px;
+}
+
+.submenu::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: #2F3136;
+    width: 5px;
+}
+
+.part {
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.part .title {
+    font-family: "ABC Ginto Normal", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: rgb(185,187,190);
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 12.5px;
+    margin-bottom: 7.5px;
+}
+
+.part .description {
+    color: rgb(220,221,222);
+    font-size: 12.5px;
+}
+
+.part .values {
+    height: max-content;
+    margin-bottom: -4px;
+    margin-right: -4px;
+}
+
+.part .values .role {
+    background-color: #292B2F;
+    float: left;
+    min-width: max-content;
+    width: max-content;
+    padding: 5px;
+    border-radius: 5px;
+    display: flex;
+    max-height: 20px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+.part .values .role .defaultIcon {
+    height: 12px;
+    min-width: 12px;
+    border-radius: 12px;
+    margin: auto;
+    margin-left: 5px;
+    margin-right: 2.5px;
+    display: flex;
+}
+
+.part .values .role img {
+    height: 12px;
+    margin: auto;
+    margin-left: 5px;
+    margin-right: 2.5px;
+    display: flex;
+}
+
+.part .values .role .name {
+    font-size: 12px;
+    font-weight: 500;
+    margin: auto;
+    width: 100%;
+    margin-left: 2.5px;
+    margin-right: 5px;
+}
