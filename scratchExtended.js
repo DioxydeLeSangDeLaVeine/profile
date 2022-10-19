@@ -16,6 +16,17 @@ class JavaScriptBasics {
                     }
                 },
                 {
+                    opcode: "printedjavascript",
+                    blockType: Scratch.BlockType.COMMAND,
+                    text: "printEval [CODE]",
+                    arguments: {
+                        CODE: {
+                            type: Scratch.ArgumentType.STRING,
+                            defaultValue: " "
+                        }
+                    }
+                },
+                {
                     opcode: "subString",
                     blockType: Scratch.BlockType.REPORTER,
                     text: 'subString [STRING] from [START] to [END]',
@@ -69,9 +80,16 @@ class JavaScriptBasics {
     }
     javascript(args) {
         try {
-            eval(args.CODE)
+            return eval(args.CODE)
         } catch(e) {
-            return "Error.."
+            return " "
+        }
+    }
+    printedjavascript(args) {
+        try {
+            return eval(args.CODE)
+        } catch(e) {
+            return " "
         }
     }
     subString(args) {
