@@ -53,7 +53,7 @@ class BrainFuck {
                 {
                     opcode: "reverse",
                     blockType: Scratch.BlockType.COMMAND,
-                    text: "\"
+                    text: "\\"
                 }
             ]
         }
