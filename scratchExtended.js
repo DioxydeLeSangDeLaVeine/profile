@@ -10,8 +10,8 @@ class JavaScriptBasics {
                     text: "eval [CODE]",
                     arguments: {
                         CODE: {
-                            type: Scratch.ArgumentType,
-                            defaultValue: ""
+                            type: Scratch.ArgumentType.STRING,
+                            defaultValue: " "
                         }
                     }
                 },
@@ -22,7 +22,7 @@ class JavaScriptBasics {
                     arguments: {
                         STRING: {
                             type: Scratch.ArgumentType.STRING,
-                            defaultValue: ""
+                            defaultValue: " "
                         },
                         START: {
                             type: Scratch.ArgumentType.NUMBER
@@ -39,7 +39,7 @@ class JavaScriptBasics {
                     arguments: {
                         STRING: {
                             type: Scratch.ArgumentType.STRING,
-                            defaultValue: ""
+                            defaultValue: " "
                         },
                         INDEX: {
                             type: Scratch.ArgumentType.NUMBER
@@ -53,11 +53,11 @@ class JavaScriptBasics {
                     arguments: {
                         STRING: {
                             type: Scratch.ArgumentType.STRING,
-                            defaultValue: ""
+                            defaultValue: " "
                         },
                         WORD: {
                             type: Scratch.ArgumentType.STRING,
-                            defaultValue: ""
+                            defaultValue: " "
                         },
                         INDEX: {
                             type: Scratch.ArgumentType.NUMBER
