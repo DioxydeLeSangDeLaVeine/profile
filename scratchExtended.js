@@ -10,13 +10,14 @@ class JavaScriptBasics {
                     text: '[STRING] from [START] to [END]',
                     arguments: {
                         STRING: {
-                            type: Scratch.ArgumentType.STRING
+                            type: Scratch.ArgumentType.STRING,
+                            defaultValue: "Scratchcat"
                         },
                         START: {
                             type: Scratch.ArgumentType.NUMBER
                         },
                         END: {
-                            type: Scratch.ArgumentType.END
+                            type: Scratch.ArgumentType.NUMBER
                         }
                     }
                 }
