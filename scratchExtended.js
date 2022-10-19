@@ -5,13 +5,24 @@ class JavaScriptBasics {
             name: "JavaScriptBasics",
             blocks: [
                 {
-                    opcode: "substring",
+                    opcode: "javascript",
+                    blockType: Scratch.BlockType.COMMAND,
+                    text: "eval [CODE]",
+                    arguments: {
+                        CODE: {
+                            type: Scratch.ArgumentType,
+                            defaultValue: ""
+                        }
+                    }
+                },
+                {
+                    opcode: "subString",
                     blockType: Scratch.BlockType.REPORTER,
-                    text: '[STRING] from [START] to [END]',
+                    text: 'subString [STRING] from [START] to [END]',
                     arguments: {
                         STRING: {
                             type: Scratch.ArgumentType.STRING,
-                            defaultValue: "Scratchcat"
+                            defaultValue: ""
                         },
                         START: {
                             type: Scratch.ArgumentType.NUMBER
@@ -20,12 +31,57 @@ class JavaScriptBasics {
                             type: Scratch.ArgumentType.NUMBER
                         }
                     }
+                },
+                {
+                    opcode: "charCode",
+                    blockType: Scratch.BlockType.REPORTER,
+                    text: "charCode [STRING] at [INDEX]",
+                    arguments: {
+                        STRING: {
+                            type: Scratch.ArgumentType.STRING,
+                            defaultValue: ""
+                        },
+                        INDEX: {
+                            type: Scratch.ArgumentType.NUMBER
+                        }
+                    }
+                },
+                {
+                    opcode: "indexOf",
+                    blockType: Scratch.BlockType.REPORTER,
+                    text: "firstIndex [STRING] of [WORD] after [INDEX]",
+                    arguments: {
+                        STRING: {
+                            type: Scratch.ArgumentType.STRING,
+                            defaultValue: ""
+                        },
+                        WORD: {
+                            type: Scratch.ArgumentType.STRING,
+                            defaultValue: ""
+                        },
+                        INDEX: {
+                            type: Scratch.ArgumentType.NUMBER
+                        }
+                    }
                 }
             ]
         }
     }
-    substring(args) {
+    javascript(args) {
+        try {
+            eval(args.CODE)
+        } catch(e) {
+            return "Error.."
+        }
+    }
+    subString(args) {
         return args.STRING.substring(args.START,args.END)
+    }
+    charCode(args) {
+        return args.STRING.charCodeAt(args.INDEX)
+    }
+    indexOf(args) {
+        return args.STRING.indexOf(args.WORD,args.NUMBER)
     }
 }
 Scratch.extensions.register(new JavaScriptBasics())
