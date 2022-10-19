@@ -30,6 +30,11 @@ class BrainFuck {
                     text: ","
                 },
                 {
+                    opcode: "getCode",
+                    blockType: Scratch.BlockType.REPORTER,
+                    text: ";"
+                },
+                {
                     opcode: "put",
                     blockType: Scratch.BlockType.COMMAND,
                     text: ". [CHAR]",
@@ -39,6 +44,11 @@ class BrainFuck {
                             defaultValue: "E"
                         }
                     }
+                },
+                {
+                    opcode: "reset",
+                    blockType: Scratch.BlockType.COMMAND,
+                    text: "/"
                 }
             ]
         }
@@ -66,10 +76,16 @@ class BrainFuck {
     get(args) {
         return String.fromCharCode(this.memory[this.cursor])
     }
+    getCode(args) {
+        return this.memory[this.cursor]
+    }
     put(args) {
         if(args.CHAR.length == 0 || args.CHAR.length > 1)return;
         if(args.CHAR.charCodeAt(0) < 0 || args.CHAR.charCodeAt(0) > 255)return;
         this.memory[this.cursor] = args.CHAR.charCodeAt(0)
+    }
+    get(args) {
+        return this.memory[this.cursor] = 0
     }
 }
 Scratch.extensions.register(new BrainFuck())
