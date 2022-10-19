@@ -6,7 +6,7 @@ class JavaScriptBasics {
             blocks: [
                 {
                     opcode: "object_getkey",
-                    blockType: Scratch.BlockType.COMMAND,
+                    blockType: Scratch.BlockType.REPORTER,
                     text: "OBJECT [PARSEDJSON] getKey [KEY]",
                     arguments: {
                         PARSEDJSON: {
