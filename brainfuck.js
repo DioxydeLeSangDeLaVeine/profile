@@ -85,7 +85,7 @@ class BrainFuck {
         else this.memory[this.cursor]+=1
     }
     moins(args) {
-        if(this.memory[this.cursor]+1 < 0)this.memory[this.cursor]=255
+        if(this.memory[this.cursor]-1 < 0)this.memory[this.cursor]=255
         else this.memory[this.cursor]-=1
     }
     get(args) {
