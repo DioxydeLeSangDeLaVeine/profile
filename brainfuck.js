@@ -59,6 +59,11 @@ class BrainFuck {
                     opcode: "reverse",
                     blockType: Scratch.BlockType.COMMAND,
                     text: "\\"
+                },
+                {
+                    opcode: "print",
+                    blockType: Scratch.BlockType.REPORTER,
+                    text: "*"
                 }
             ]
         }
@@ -103,6 +108,9 @@ class BrainFuck {
     }
     reverse(args) {
         this.memory[this.cursor] = 255-this.memory[this.cursor]
+    }
+    print(args) {
+        return this.memory   
     }
 }
 Scratch.extensions.register(new BrainFuck())
