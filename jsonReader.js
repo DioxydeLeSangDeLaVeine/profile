@@ -1,18 +1,25 @@
-class JavaScriptBasics {
+class JSONDataBase {
     getInfo() {
         return {
-            id: "jsonreaderscripts",
-            name: "JSON Reader",
+            id: "jsondatabase",
+            name: "JSON Data Base",
             blocks: [
                 {
-                    opcode: "object_getkey",
-                    blockType: Scratch.BlockType.REPORTER,
-                    text: "OBJECT [PARSEDJSON] getKey [KEY]",
+                    opcode: "bcursor",
+                    blockType: Scratch.BlockType.COMMAND,
+                    text: "cursor [PATH]",
                     arguments: {
-                        PARSEDJSON: {
-                            type: Scratch.ArgumentType.STRING,
-                            defaultValue: "{}"
-                        },
+                        PATH: {
+                            type: "Scratch.ArgumentType.String",
+                            defaultValue: " "
+                        }
+                    }
+                },
+                {
+                    opcode: "getvalue",
+                    blockType: Scratch.BlockType.REPORTER,
+                    text: "getValue [KEY]",
+                    arguments: {
                         KEY: {
                             type: Scratch.ArgumentType.STRING,
                             defaultValue: " "
@@ -22,8 +29,14 @@ class JavaScriptBasics {
             ]
         }
     }
-    object_getkey(args) {
-        return JSON.stringify(JSON.parse(args.PARSEDJSON)[args.KEY])
+    database = {}
+    cursor = ""
+    bcursor(args) {
+        if(args.PATH == "") this.cursor=this.cursor.substring(this.cursor.lastIndexOf('['),this.cursor.length)
+        else this.cursor = this.cursor.concat(`[${args.PATH}]`)
+    }
+    getvalue(args) {
+        return this.cursor
     }
 }
-Scratch.extensions.register(new JavaScriptBasics())
+Scratch.extensions.register(new JSONDataBase())
