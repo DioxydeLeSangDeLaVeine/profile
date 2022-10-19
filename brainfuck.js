@@ -22,7 +22,7 @@ class BrainFuck {
                 {
                     opcode: "moins",
                     blockType: Scratch.BlockType.COMMAND,
-                    text: "+"
+                    text: "-"
                 },
                 {
                     opcode: "get",
