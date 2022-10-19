@@ -78,6 +78,7 @@ class JavaScriptBasics {
             ]
         }
     }
+    customDatabase={}
     javascript(args) {
         try {
             return eval(args.CODE)
