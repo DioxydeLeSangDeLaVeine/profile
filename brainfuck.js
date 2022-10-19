@@ -66,9 +66,9 @@ class BrainFuck {
         return String.fromCharCode(this.memory[this.cursor])
     }
     put(args) {
-        if(args.STRING.length == 0 || args.STRING.length > 1)return;
-        if(args.STRING.charCodeAt(0) < 0 || args.STRING.charCodeAt(0) > 255)return;
-        this.memory[this.cursor] = args.STRING.charCodeAt(0)
+        if(args.CHAR.length == 0 || args.CHAR.length > 1)return;
+        if(args.CHAR.charCodeAt(0) < 0 || args.CHAR.charCodeAt(0) > 255)return;
+        this.memory[this.cursor] = args.CHAR.charCodeAt(0)
     }
 }
 Scratch.extensions.register(new BrainFuck())
