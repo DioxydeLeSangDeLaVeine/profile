@@ -17,7 +17,7 @@ class JavaScriptBasics {
                 },
                 {
                     opcode: "printedjavascript",
-                    blockType: Scratch.BlockType.COMMAND,
+                    blockType: Scratch.BlockType.REPORTER,
                     text: "printEval [CODE]",
                     arguments: {
                         CODE: {
