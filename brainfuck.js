@@ -93,7 +93,7 @@ class BrainFuck {
         return this.memory[this.cursor] = 0
     }
     reverse(args) {
-        return 255-this.memory[this.cursor] = 0
+        return this.memory[this.cursor] = 255-this.memory[this.cursor]
     }
 }
 Scratch.extensions.register(new BrainFuck())
