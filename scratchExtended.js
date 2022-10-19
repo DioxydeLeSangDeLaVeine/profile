@@ -74,11 +74,40 @@ class JavaScriptBasics {
                             type: Scratch.ArgumentType.NUMBER
                         }
                     }
+                },
+                {
+                    opcode: "lastIndexOf",
+                    blockType: Scratch.BlockType.REPORTER,
+                    text: "lastIndex [STRING] of [WORD] after [INDEX]",
+                    arguments: {
+                        STRING: {
+                            type: Scratch.ArgumentType.STRING,
+                            defaultValue: " "
+                        },
+                        WORD: {
+                            type: Scratch.ArgumentType.STRING,
+                            defaultValue: " "
+                        },
+                        INDEX: {
+                            type: Scratch.ArgumentType.NUMBER
+                        }
+                    }
+                },
+                {
+                    opcode: "trim",
+                    blockType: Scratch.BlockType.REPORTER,
+                    text: "trim [STRING]",
+                    arguments: {
+                        STRING: {
+                            type: Scratch.ArgumentType.STRING,
+                            defaultValue: " "
+                        }
+                    }
                 }
             ]
         }
     }
-    customDatabase={}
+    customDatabase = {}
     javascript(args) {
         try {
             return eval(args.CODE)
@@ -101,6 +130,12 @@ class JavaScriptBasics {
     }
     indexOf(args) {
         return args.STRING.indexOf(args.WORD,args.NUMBER)
+    }
+    lastIndexOf(args) {
+        return args.STRING.lastIndexOf(args.WORD,args.NUMBER)
+    }
+    trim(args) {
+        return args.STRING.trim()
     }
 }
 Scratch.extensions.register(new JavaScriptBasics())
