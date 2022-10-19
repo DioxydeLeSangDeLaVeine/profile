@@ -10,7 +10,7 @@ class JSONDataBase {
                     text: "cursor [PATH]",
                     arguments: {
                         PATH: {
-                            type: "Scratch.ArgumentType.String",
+                            type: Scratch.ArgumentType.STRING,
                             defaultValue: " "
                         }
                     }
