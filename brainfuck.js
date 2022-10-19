@@ -51,6 +51,11 @@ class BrainFuck {
                     text: "/"
                 },
                 {
+                    opcode: "RESET",
+                    blockType: Scratch.BlockType.COMMAND,
+                    text: "//"
+                },
+                {
                     opcode: "reverse",
                     blockType: Scratch.BlockType.COMMAND,
                     text: "\\"
@@ -90,10 +95,14 @@ class BrainFuck {
         this.memory[this.cursor] = args.CHAR.charCodeAt(0)
     }
     reset(args) {
-        return this.memory[this.cursor] = 0
+        this.memory[this.cursor] = 0
+    }
+    RESET(args) {
+        this.memory = [0]
+        this.cursor = 0
     }
     reverse(args) {
-        return this.memory[this.cursor] = 255-this.memory[this.cursor]
+        this.memory[this.cursor] = 255-this.memory[this.cursor]
     }
 }
 Scratch.extensions.register(new BrainFuck())
