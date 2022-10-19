@@ -35,7 +35,8 @@ class BrainFuck {
                     text: ". [CHAR]",
                     arguments: {
                         CHAR: {
-                            type: Scratch.ArgumentType.STRING
+                            type: Scratch.ArgumentType.STRING,
+                            defaultValue: "E"
                         }
                     }
                 }
