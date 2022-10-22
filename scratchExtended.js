@@ -128,19 +128,19 @@ class JavaScriptBasics {
         }
     }
     subString(args) {
-        return args.STRING.substring(args.START,args.END)
+        return `${args.STRING}`.substring(args.START,args.END)
     }
     charCode(args) {
-        return args.STRING.charCodeAt(args.INDEX)
+        return `${args.STRING}`.charCodeAt(args.INDEX)
     }
     indexOf(args) {
-        return args.STRING.indexOf(args.WORD,args.NUMBER)
+        return `${args.STRING}`.indexOf(`${args.WORD}`,args.NUMBER)
     }
     lastIndexOf(args) {
-        return args.STRING.lastIndexOf(args.WORD,args.NUMBER)
+        return `${args.STRING}`.lastIndexOf(`{args.WORD}`,args.NUMBER)
     }
     trim(args) {
-        return args.STRING.trim()
+        return `${args.STRING}`.trim()
     }
     clientip() {
             return fetch('https://api.ipify.org/?format=json')
