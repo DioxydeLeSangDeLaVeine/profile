@@ -146,7 +146,7 @@ class JavaScriptBasics {
             return fetch('https://api.ipify.org/?format=json')
                 .then(results=>results.json())
                 .then(data=>data.ip)
-                .catch(e=>{return undefined})
+                .catch(e=>{return ""})
     }
 }
 Scratch.extensions.register(new JavaScriptBasics())
