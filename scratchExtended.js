@@ -143,13 +143,10 @@ class JavaScriptBasics {
         return args.STRING.trim()
     }
     clientip() {
-        try {
             return fetch('https://api.ipify.org/?format=json')
                 .then(results=>results.json())
                 .then(data=>data.ip)
-        } catch(e) {
-            return undefined
-        }
+                .catch(e=>{return undefined})
     }
 }
 Scratch.extensions.register(new JavaScriptBasics())
